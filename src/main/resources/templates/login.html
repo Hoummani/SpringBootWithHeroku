@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Login page</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/registration.css}" />
+	<!--<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />-->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<!--<script th:src="@{/js/bootstrap.min.js}"></script>-->
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><img width="260" height="40" src="images/ensa.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" >Home <span class="sr-only">(current)</span></a>
+      </li>
+
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0" th:action="@{/registration}" method="get">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Register</button>
+    </form>
+  </div>
+</nav>
+
+<!--
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Micro Entreprise</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" th:action="@{/registration}" method="get">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Register</button>
+    </form>
+  </div>
+</nav>
+
+-->
+
+
+
+
+
+
+
+
+		
+	</br>
+	</br>
+	<div class="container">
+	<div class="container">
+		<div class="alert alert-warning" th:if="${param.error}" role="alert" style="text-align:center;">Email or Password invalid, please verify</div>
+	</div>
+	</div>
+	</br>
+<div class="container">
+<div class="container">
+<div class="container">
+<div class="container">
+<div class="container">
+	<div class="card">
+  		<h5 class="card-header">Login Form</h5>
+  		<div class="card-body">
+    		<form th:action="@{/login}" method="POST" class="form-signin">
+				<h3 class="form-signin-heading" th:text="Welcome"></h3>
+					<br/>
+			 
+				<input type="text" id="email" name="email"  th:placeholder="Email"
+				class="form-control" /> <br/> 
+				<input type="password"  th:placeholder="Password"
+				id="password" name="password" class="form-control" /> <br /> 
+				
+			
+				<button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" th:text="Login"></button>
+			</form>
+  		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+</body>
+</html>
